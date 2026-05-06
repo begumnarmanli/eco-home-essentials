@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
-
 html,
 body {
   font-family: "Roboto", sans-serif;
@@ -432,6 +430,18 @@ button:hover {
 .special-btn:hover {
   background: linear-gradient(45deg, #66bb6a, #ffffff);
 }
+
+.cover img {
+  position: absolute;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+.cover img.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 #cart-count {
   font-weight: bold;
   background: #81c784;

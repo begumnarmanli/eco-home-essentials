@@ -607,43 +607,43 @@ document.querySelectorAll(".card").forEach((card) => {
   let timeoutId;
   let kitapAcik = false;
 
-  img2.style.display = "none";
-  img1.style.display = "block";
+  // display yerine class kullan
+  img1.classList.add("active");
+  img2.classList.remove("active");
 
   card.addEventListener("mouseenter", () => {
     if (kitapAcik) return;
-
     timeoutId = setTimeout(() => {
-      img1.style.display = "none";
-      img2.style.display = "block";
+      img1.classList.remove("active");
+      img2.classList.add("active");
       kitapAcik = true;
     }, 1000);
   });
 
   card.addEventListener("mouseleave", () => {
+    clearTimeout(timeoutId);
     if (kitapAcik) {
       setTimeout(() => {
-        img1.style.display = "block";
-        img2.style.display = "none";
+        img1.classList.add("active");
+        img2.classList.remove("active");
         kitapAcik = false;
       }, 500);
     }
-    clearTimeout(timeoutId);
   });
 
   cover.addEventListener("click", (e) => {
     e.preventDefault();
-
+    clearTimeout(timeoutId);
     if (!kitapAcik) {
       setTimeout(() => {
-        img1.style.display = "none";
-        img2.style.display = "block";
+        img1.classList.remove("active");
+        img2.classList.add("active");
         kitapAcik = true;
       }, 500);
     } else {
       setTimeout(() => {
-        img1.style.display = "block";
-        img2.style.display = "none";
+        img1.classList.add("active");
+        img2.classList.remove("active");
         kitapAcik = false;
       }, 500);
     }
