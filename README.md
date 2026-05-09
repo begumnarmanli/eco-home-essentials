@@ -30,6 +30,18 @@ Eco Home Essentials, sürdürülebilir ve doğa dostu ev ürünlerinin sergilend
   <i>Projenin masaüstü ve ürün listeleme arayüzleri yan yana gösterilmiştir.</i>
 </p>
 
+## 📊 Lighthouse Performans Skorları
+
+### 🖥️ Masaüstü
+<p align="center">
+  <img src="./screenshots/desktop-performans.webp" width="60%" alt="Masaüstü Lighthouse Skoru">
+</p>
+
+### 📱 Mobil
+<p align="center">
+  <img src="./screenshots/mobil-performans.webp" width="60%" alt="Mobil Lighthouse Skoru">
+</p>
+
 ## 👤 Geliştirici
 
 **Begüm Narmanlı**
